@@ -10,14 +10,10 @@ const Chart: React.FC = () => {
             </h2>
          </div>
          
-         <div className="rounded-xl overflow-hidden border-2 border-oil-gold/30 shadow-[0_0_30px_rgba(230,145,56,0.2)] bg-oil-dark">
-            <style dangerouslySetInnerHTML={{__html: `
-              #dexscreener-embed{position:relative;width:100%;padding-bottom:125%;}
-              @media(min-width:1400px){#dexscreener-embed{padding-bottom:65%;}}
-              #dexscreener-embed iframe{position:absolute;width:100%;height:100%;top:0;left:0;border:0;}
-            `}} />
-            <div id="dexscreener-embed">
+         <div className="rounded-xl overflow-hidden border-2 border-oil-gold/30 shadow-[0_0_30px_rgba(230,145,56,0.2)] bg-oil-dark w-full">
+            <div className="relative w-full h-0 pb-[125%] lg:pb-[65%]">
               <iframe 
+                className="absolute top-0 left-0 w-full h-full border-0"
                 src="https://dexscreener.com/solana/RN4LQdSmaYkCKNnrN8eFjGZ9tUUPN6nriEdpCF74oiL?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
                 title="OilCoin Chart"
               ></iframe>
